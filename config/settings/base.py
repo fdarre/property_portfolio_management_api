@@ -1,5 +1,5 @@
 """
-Django base settings for django_property_management_api project.
+Django base settings for property_portfolio_management_api project.
 Settings shared by all settings files.
 """
 
