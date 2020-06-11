@@ -173,4 +173,4 @@ MEDIA_URL = "/media/"
 #################
 
 # Google map Javascript API key
-GOOGLE_API_KEY = "AIzaSyAIfBBJF1H1TYW_1myX5cAp3qH4kI7Qgn0"
+GOOGLE_API_KEY = env("GOOGLE_API_KEY")
