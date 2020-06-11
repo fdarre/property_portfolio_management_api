@@ -31,9 +31,9 @@ DJANGO_APPPLICATIONS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
-THIRD_PARTY_APPLICATIONS = []
+THIRD_PARTY_APPLICATIONS = ["address"]
 
-LOCAL_APPLICATIONS = []
+LOCAL_APPLICATIONS = ["properties"]
 
 INSTALLED_APPS = DJANGO_APPPLICATIONS + THIRD_PARTY_APPLICATIONS + LOCAL_APPLICATIONS
 
@@ -114,7 +114,8 @@ TEMPLATES = [
 PASSWORD_HASHERS = [
     # Argon2 is a nexxt generation hashing algorithm.
     # Requires 'argon2-cffi' third party library.
-    # The Password Hashing Competition panel recommends immediate use of Argon2 rather than the other algorithms supported by Django.
+    # The Password Hashing Competition panel recommends immediate use of Argon2 rather than
+    # the other algorithms supported by Django.
     "django.contrib.auth.hashers.Argon2PasswordHasher",
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",
     "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
@@ -141,7 +142,8 @@ EMAIL_BACKEND = env(
     "DJANGO_EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend"
 )
 
-EMAIL_TIMEOUT = 5  # Specifies a timeout in seconds for blocking operations like the connection attempt.
+# Specifies a timeout in seconds for blocking operations like the connection attempt.
+EMAIL_TIMEOUT = 5
 
 ###############
 # STATIC FILES
@@ -163,3 +165,10 @@ MEDIA_ROOT = BASE_DIR + "media"
 
 # URL handling the media served from MEDIA_ROOT
 MEDIA_URL = "/media/"
+
+#################
+# DJANGO ADDRESS
+#################
+
+# Google map Javascript API key
+GOOGLE_API_KEY = "AIzaSyAIfBBJF1H1TYW_1myX5cAp3qH4kI7Qgn0"
