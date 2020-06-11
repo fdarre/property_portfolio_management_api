@@ -3,4 +3,4 @@
 #########
 django==3.0.7 # https://www.djangoproject.com/
 django-environ==0.4.5  # https://github.com/joke2k/django-environ
-django-address-0.2.2 # https://github.com/furious-luke/django-address
+django-address==0.2.2 # https://github.com/furious-luke/django-address
