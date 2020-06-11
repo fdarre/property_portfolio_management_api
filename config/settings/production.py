@@ -2,7 +2,8 @@
 Production specific settings.
 """
 
-from .base import *
+from .base import *  # noqa
+from .base import env
 
 ##########
 # GENERAL
@@ -22,8 +23,8 @@ ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS")
 # DATABASE
 ###########
 
-DATABASES["default"] = env.db("DATABASE_URL")
-DATABASES["default"]["ATOMIC_REQUESTS"] = True
+DATABASES["default"] = env.db("DATABASE_URL")  # noqa F405
+DATABASES["default"]["ATOMIC_REQUESTS"] = True  # noqa F405
 
 
 #################
