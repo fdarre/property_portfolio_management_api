@@ -4,6 +4,7 @@ from django.db import models
 
 class Building(models.Model):
     address = AddressField()
+    ownerName = models.CharField(max_length=30, null=True, blank=True)
     is_in_protected_heritage_area = models.BooleanField()
     construction_date = models.DateField(null=True, blank=True)
     acquisition_date = models.DateField(null=True, blank=True)
@@ -100,6 +101,7 @@ class Income(models.Model):
     amount = models.DecimalField(max_digits=6, decimal_places=2)
     observation = models.CharField(max_length=100, null=True, blank=True)
     unit = models.ForeignKey(Unit, on_delete=models.CASCADE)
+    building = models.ForeignKey(Building, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.category}, {self.amount} {self.currency}"
