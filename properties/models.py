@@ -4,8 +4,8 @@ from django.db import models
 
 class Building(models.Model):
     address = AddressField()
-    number_of_units = models.IntegerField(max_length=20, null=True, blank=True)
-    number_of_floors = models.IntegerField(max_length=20)
+    number_of_units = models.IntegerField(null=True, blank=True)
+    number_of_floors = models.IntegerField()
     surface_area = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
     ownerName = models.CharField(max_length=30, null=True, blank=True)
     construction_date = models.DateField(null=True, blank=True)

@@ -31,7 +31,7 @@ DJANGO_APPPLICATIONS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
-THIRD_PARTY_APPLICATIONS = ["address"]
+THIRD_PARTY_APPLICATIONS = ["address", "rest_framework"]
 
 LOCAL_APPLICATIONS = ["properties"]
 
@@ -174,3 +174,13 @@ MEDIA_URL = "/media/"
 
 # Google map Javascript API key
 GOOGLE_API_KEY = env("GOOGLE_API_KEY")
+
+########################
+# DJANGO REST FRAMEWORK
+########################
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.rest_framework.IsAdminUser'
+    ]
+}

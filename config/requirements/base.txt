@@ -1,6 +1,19 @@
 #########
 # Django
 #########
-django==3.0.7 # https://www.djangoproject.com/
-django-environ==0.4.5  # https://github.com/joke2k/django-environ
-django-address==0.2.2 # https://github.com/furious-luke/django-address
+django==3.0.7                 # https://www.djangoproject.com/
+django-environ==0.4.5         # https://github.com/joke2k/django-environ
+django-address==0.2.2         # https://github.com/furious-luke/django-address
+
+########################
+# Django Rest Framework
+########################
+djangorestframework==3.11.0   # https://www.django-rest-framework.org/
+Markdown==3.2.2               # https://python-markdown.github.io/
+django-filter==2.3.0          # https://github.com/carltongibson/django-filter/tree/master
+
+###########
+# Security
+###########
+argon2==0.1.10                # https://github.com/flamewow/argon2_py
+argon2-cffi==20.1.0           # https://argon2-cffi.readthedocs.io/en/stable/
