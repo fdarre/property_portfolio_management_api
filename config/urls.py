@@ -9,8 +9,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    url(r'^api-auth/', include('rest_framework.urls')), # DRF browsable API
-    path("properties/", include("properties.urls", namespace="properties")),
+    path("properties/", include("properties.api.urls", namespace="properties")),
+    url(r'^api-auth/', include('rest_framework.urls')),  # DRF browsable API
 ]
 
 if settings.DEBUG:
