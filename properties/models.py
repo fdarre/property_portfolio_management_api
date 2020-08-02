@@ -1,9 +1,19 @@
-from address.models import AddressField
 from django.db import models
+from django.contrib.auth.models import User
 
+class Address(models.Model):
+    #@todo: add latitude and longitude
+    street_number = models.CharField(max_length=10)
+    street_name = models.CharField(max_length=40)
+    postal_code = models.CharField(max_length=10)
+    city = models.CharField(max_length=40)
+    state = models.CharField(max_length=40)
+    country = models.CharField(max_length=40)
 
-class Building(models.Model):
-    address = AddressField()
+    class Meta:
+        abstract = True
+
+class Building(Address):
     number_of_units = models.IntegerField(null=True, blank=True)
     number_of_floors = models.IntegerField()
     surface_area = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
@@ -19,9 +29,10 @@ class Building(models.Model):
     is_co_ownership = models.BooleanField()
 
     is_in_protected_heritage_area = models.BooleanField()
+    user = models.ForeignKey(User, models.CASCADE)
 
     def __str__(self):
-        return f"{self.address}"
+        return "test"
 
 
 class Unit(models.Model):
