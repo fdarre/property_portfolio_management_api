@@ -31,7 +31,7 @@ DJANGO_APPPLICATIONS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
-THIRD_PARTY_APPLICATIONS = ["address", "rest_framework"]
+THIRD_PARTY_APPLICATIONS = ["rest_framework"]
 
 LOCAL_APPLICATIONS = ["properties"]
 
